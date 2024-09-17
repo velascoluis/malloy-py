@@ -13,3 +13,6 @@ third_party.txt
 
 # Jetbrains IDEs
 .idea/
+
+# Build artifacts
+build/

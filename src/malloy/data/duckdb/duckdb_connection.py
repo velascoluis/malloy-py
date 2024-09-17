@@ -50,15 +50,12 @@ class DuckDbConnection(ConnectionInterface):
 
   _table_regex = re.compile("^duckdb:(.+)$")
 
-  def __init__(self, home_dir=None, name="duckdb"):
+  def __init__(self, connection=None, home_dir=None, name="duckdb"):
     self._log = logging
     self._name = name
     self._client_options = {}
-    if home_dir is None:
-      self._home_directory = None
-    else:
-      self._home_directory = Path(home_dir).resolve()
-    self._con = None
+    self._home_directory = Path(home_dir).resolve() if home_dir else None
+    self._con = connection
     self._log.debug("DuckDbConnection(\"%s\") initialized", name)
 
   def get_name(self) -> str:
