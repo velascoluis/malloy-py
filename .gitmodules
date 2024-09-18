@@ -1,3 +1,3 @@
 [submodule "submodules/malloy-service"]
-	path = submodules/malloy-service
-	url = git@github.com:velascoluis/malloy-service
+          path = submodules/malloy-service
+          url = https://github.com/velascoluis/malloy-service.git
