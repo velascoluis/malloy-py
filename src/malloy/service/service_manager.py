@@ -63,6 +63,8 @@ class ServiceManager:
       service_name += ".exe"
 
     service_path = f"{Path(Path(__file__).parent, service_name).resolve()}"
+    print(f"previous service_path: {service_path}")
+    service_path = "/app/malloy-py/submodules/malloy-service/pkg/@malloydata/malloy-service-linux-x64"
     return service_path
 
   def __init__(self, external_service: str = None):
